@@ -1,0 +1,121 @@
+:root:has(.mode:checked) body {
+  background-color: #202020;
+  color: white;
+}
+:root:has(.mode:checked) ::selection {
+  background-color: #9b6519;
+  opacity: 0.2;
+  color: #202020;
+}
+:root:has(.mode:checked) .mode-group .dark {
+  display: none;
+}
+:root:has(.mode:checked) .mode-group .light {
+  display: block;
+  color: #fff;
+}
+:root:has(.mode:checked) .navbar {
+  background-color: hsl(0, 0%, 9%);
+}
+:root:has(.mode:checked) div.logo a::after {
+  color: #c17e1f;
+}
+:root:has(.mode:checked) .nav-links li a::before {
+  background: #c17e1f;
+}
+body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
+body:has(.home:target):has(.mode:checked) li a[href="#home"],
+body:has(.contact:target):has(.mode:checked) li a[href="#contact"],
+body:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
+body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
+  color: #fff;
+}
+body:has(.mode:checked) .navbar .nav-links a:hover {
+  color: #fff;
+}
+:root:has(.mode:checked) div.home {
+  background-color: #252525;
+}
+:root:has(.mode:checked) div.home-content p {
+  color: #9f9f9f;
+}
+:root:has(.mode:checked) h2 {
+  color: #fff;
+}
+:root:has(.mode:checked) p > span {
+  color: #c17e1f;
+}
+:root:has(.mode:checked) button {
+  background-color: #c17e1f;
+  color: #202020;
+}
+:root:has(.mode:checked) div.btn-group .btn-home {
+  background-color: #c17e1f;
+  color: #202020;
+}
+:root:has(.mode:checked) div.btn-group .btn-home:hover {
+  background-color: hsl(35, 72%, 49%);
+}
+:root:has(.mode:checked) .video-btn div.icon {
+  background-image: linear-gradient(
+    to right,
+    #c17e1f 0 50%,
+    transparent 50% 100%
+  );
+}
+:root:has(.mode:checked) .video-btn div.icon::before {
+  background-color: #202020;
+}
+:root:has(.mode:checked) .video-btn:hover {
+  color: #c17e1f;
+}
+:root:has(.mode:checked) .main-title h2 {
+  color: #9f9f9f;
+}
+:root:has(.mode:checked) div.chefs-cards div.card picture::before {
+  background-image: url("../images/team-shape-dark.svg");
+}
+:root:has(.mode:checked) div.card {
+  background-color: hsl(0, 0%, 9%);
+}
+:root:has(.mode:checked) div.card-content {
+  background-color: hsl(0, 0%, 9%);
+}
+:root:has(.mode:checked) div.card-content span,
+:root:has(.mode:checked) div.card-content p {
+  color: #9f9f9f;
+}
+:root:has(.mode:checked) div.gallery {
+  background-color: #252525;
+}
+:root:has(.mode:checked) .contact .details > div {
+  background-color: hsl(0, 0%, 5%);
+}
+:root:has(.mode:checked) .contact .details > div h3 {
+  color: #adadad;
+}
+:root:has(.mode:checked) .contact .details .icon {
+  background-color: #c17e1f;
+}
+:root:has(.mode:checked) .contact .details .icon i {
+  color: #202020;
+}
+:root:has(.mode:checked) .contact form {
+  background-color: hsl(0, 0%, 9%);
+}
+:root:has(.mode:checked) div.contact form :is(input, textarea):focus {
+  outline: none;
+  border-color: #c17e1f;
+}
+:root:has(.mode:checked) .contact form button:hover {
+  background-color: hsl(35, 72%, 49%);
+}
+:root:has(.mode:checked) .subscription-group button:hover {
+  background-color: hsl(35, 72%, 49%);
+}
+:root:has(.mode:checked) .contact-details i {
+    color: #c17e1f;
+}
+:root:has(.mode:checked) div.about .logo::after {
+    color: #c17e1f;
+}
