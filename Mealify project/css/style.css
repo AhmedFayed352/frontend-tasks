@@ -156,6 +156,7 @@ div.navbar .nav-links {
 }
 div.navbar .nav-links .close-icon {
   display: none;
+  width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
   font-size: 1.375rem;
@@ -331,11 +332,11 @@ div.chefs div.container div.chefs-cards div.card {
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-  transition: scale 400ms;
+  transition: all 400ms;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
 div.chefs div.container div.chefs-cards div.card:hover {
-  scale: 1.07;
+  transform: scale(1.07);
 }
 div.chefs div.container div.chefs-cards div.card picture {
   width: 100%;
@@ -372,6 +373,7 @@ div.card div.card-content p {
 }
 div.card .social-box {
   background-color: #ffffff4d;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0.625rem;
   border-radius: 0.3125rem;
@@ -418,7 +420,7 @@ div.gallery-photos picture {
 }
 div.gallery-photos picture img {
   width: 100%;
-  transition: scale 400ms;
+  transition: all 400ms;
 }
 div.gallery-photos picture div.layer {
   width: 100%;
@@ -445,7 +447,7 @@ div.layer p {
   text-align: center;
 }
 div.gallery-photos picture:hover img {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 div.gallery-photos picture:hover .layer {
   top: 0;
@@ -544,6 +546,7 @@ div.contact form button {
   cursor: pointer;
   transition: background-color 400ms;
   margin-top: 1.5625rem;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: inherit;
 }
