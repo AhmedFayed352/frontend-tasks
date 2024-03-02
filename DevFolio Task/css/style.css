@@ -113,6 +113,9 @@ nav.navbar {
 .dropdown ul li:hover > a {
   color: #0078ff;
 }
+.navbar button span {
+  color: #fff;
+}
 /*------------------------------------------------------------------------*/
 /* ---------------  Home CSS -------------- */
 #home {
