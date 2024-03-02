@@ -1,0 +1,693 @@
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  color: #4e4e4e;
+  background-color: #f5f5f5;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+ul {
+  list-style: none;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Navbar CSS -------------- */
+nav.navbar {
+  padding: 10px 0;
+  transition: all 0.5s;
+}
+.navbar-scrolled {
+  background-color: black !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}
+.logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.navbar-nav {
+  background-color: white;
+}
+.nav-item {
+  padding: 10px 0 10px 30px;
+  white-space: nowrap;
+}
+.linkat {
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  padding: 5px 0 !important;
+  position: relative;
+  color: #4e4e4e !important;
+}
+.linkat:hover,
+.linkat.active {
+  color: #3393ff !important;
+}
+.dropdown a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+.dropdown a i,
+.dropdown a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+.dropdown ul li {
+  min-width: 200px;
+}
+.dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #4e4e4e;
+}
+.dropdown .dropdown ul {
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
+.dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+.dropdown ul a:hover,
+.dropdown ul .active:hover,
+.dropdown ul li:hover > a {
+  color: #0078ff;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Home CSS -------------- */
+#home {
+  height: 100vh;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: #fff;
+}
+#home .layer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+#home .home-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .home-title {
+  font-size: 3rem;
+}
+.container .home-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.container .home-subtitle::after {
+  content: "|";
+  animation: typing 12s infinite;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  About CSS -------------- */
+.about {
+  padding-top: 4rem;
+}
+.about .container {
+  padding-block: 4rem;
+  padding-inline: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.about-info {
+  padding-inline: 0.75rem;
+}
+.about-info-inner-1 .image-info img {
+  margin-left: 10px;
+}
+.info-content span,
+.info-inner-2 p {
+  color: #1e1e1e;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.info-inner-2 .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+.about-me {
+  padding-inline: 0.75rem;
+}
+.about-me .title {
+  margin-bottom: 3rem;
+}
+.about-me .title h2 {
+  position: relative;
+  color: #1e1e1e;
+}
+.about-me .title h2::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  height: 3px;
+  width: 100px;
+  background-color: #0078ff;
+}
+.about-me p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Services CSS -------------- */
+div.services .container {
+  margin-top: 100px;
+}
+div.services .services-title h2 {
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 3rem;
+}
+div.services .services-title p {
+  padding-bottom: 1rem;
+  margin-bottom: 3.25rem;
+  position: relative;
+}
+div.services .services-title p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 5px;
+  background-color: #0078ff;
+  width: 40px;
+  transform: translate(-50%, -50%);
+}
+div.services .container .card {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+div.services .container .card .service-icon {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+div.services .container .card .service-icon .icon-circle {
+  transition: all 0.5s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #0078ff;
+}
+div.services .container .card .service-icon .icon-circle i {
+  font-size: 40px;
+}
+div.services .container .card:hover .icon-circle {
+  background-color: #0078ff;
+  color: #fff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Area CSS -------------- */
+.area {
+  background-image: url("../images/counters-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding: 8rem 0;
+  margin-top: 1.5rem;
+}
+.area .area-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+div.counter-area {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+div.counter-area .counter-icon {
+  margin-bottom: 1rem;
+}
+div.counter-area .counter-icon .icon-circle {
+  height: 60px;
+  width: 60px;
+  line-height: 1.5;
+  box-shadow: 0 0 0 10px #cde1f8;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+div.counter-area .counter-content p {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Portfolio CSS -------------- */
+div.portfolio .container {
+  margin-block: 60px;
+}
+div.portfolio .portfolio-title h2 {
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 3rem;
+}
+div.portfolio .portfolio-title p {
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+div.portfolio .portfolio-title p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 5px;
+  background-color: #0078ff;
+  width: 40px;
+  transform: translate(-50%, -50%);
+}
+.portfolio .container .card {
+  border: none;
+  --bs-card-inner-border-radius: none;
+  --bs-card-border-radius: none;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.portfolio .container .card .for-img {
+  display: block;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.portfolio .container .card .for-img img {
+  transition: all 1s;
+  cursor: pointer;
+}
+.portfolio .container .card .card-body {
+  padding: 2rem 3% 1rem 4%;
+}
+.portfolio .container .card:hover img {
+  transform: scale(1.3);
+}
+.portfolio .card-body .left-content h2 {
+  color: #1e1e1e;
+  font-size: 1.2rem;
+}
+.portfolio .card-body .left-content p {
+  font-size: 0.8rem;
+  color: #4e4e4e;
+}
+.portfolio .card-body .left-content span {
+  color: #0078ff;
+}
+.portfolio .card-body .right-content a {
+  font-size: 2.5rem;
+  color: #0078ff;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Sliders CSS -------------- */
+div.sliders {
+  background-image: url("../images/overlay-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 8rem 0;
+}
+div.sliders .slider-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+.sliders .carousel-caption h5 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-block: 1rem;
+}
+.sliders .carousel-caption p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: white;
+}
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Blog CSS -------------- */
+div.blog .container {
+  margin-block: 4rem;
+}
+div.blog .blog-title h2 {
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 3rem;
+}
+div.blog .blog-title p {
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+div.blog .blog-title p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 5px;
+  background-color: #0078ff;
+  width: 40px;
+  transform: translate(-50%, -50%);
+}
+.card-body .top-content {
+  padding: 3px 10px;
+  background-color: #0078ff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-body .card-title a {
+  transition: all 0.5s ease-in-out;
+}
+.card-footer a {
+  transition: all 0.5s ease-in-out;
+  font-size: 16px;
+}
+.card-body .card-title a:hover,
+.card-footer a:hover {
+  color: #0078ff;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Contact CSS -------------- */
+div.contact {
+  background-image: url("../images/overlay-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+div.contact .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+.contact .title {
+  margin-bottom: 3rem;
+}
+.contact .title h2 {
+  position: relative;
+  color: #1e1e1e;
+}
+.contact .title h2::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  height: 3px;
+  width: 100px;
+  background-color: #0078ff;
+}
+div.form-details input,
+div.form-details textarea {
+  margin-block: 1rem;
+  border-radius: 0;
+}
+div.form-details button {
+  border: 0;
+  font-size: 1.2rem;
+  border-radius: 5rem;
+  padding: 10px 24px;
+  transition: all 0.4s;
+}
+div.form-details button:hover {
+  background-color: #3393ff;
+  box-shadow: 0 0 10px 0 #3393ff;
+}
+.contact-info p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.contact-info div.lists span {
+  margin-block: 0.5rem;
+}
+.contact-info div.lists span i {
+  color: #0078ff;
+}
+.contact-info .brandat {
+  padding: 1.5rem 0;
+}
+.contact-info .brandat ul li {
+  display: inline-block;
+}
+.contact-info .brandat ul li a {
+  transition: all 0.5s ease-in-out;
+}
+.contact-info .brandat ul li a span {
+  display: block;
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  line-height: 1.6;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px #0078ff;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.contact-info .brandat ul li a:hover span {
+  background-color: #0078ff;
+  color: white;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Footer CSS -------------- */
+footer {
+  padding: 1rem 0;
+  background-color: #0062d3;
+  color: white;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  backToTop btn -------------- */
+.backTop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #0078ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.backTop:hover {
+  background: #298eff;
+  color: #fff;
+}
+.backTop i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.active-scrolled {
+  visibility: visible;
+  opacity: 1;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Some Media CSS -------------- */
+@media screen and (min-width: 768px) {
+  .sliders .carousel-caption p {
+    padding: 0 5rem;
+  }
+  .container .home-title {
+    font-size: 4.5rem;
+    margin-top: 0;
+  }
+  .container .home-subtitle {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sliders .carousel-caption p {
+    padding: 0 8rem;
+  }
+  .navbar-nav {
+    background-color: transparent;
+  }
+  .linkat {
+    color: #fff !important;
+  }
+  .linkat:hover,
+  .linkat.active {
+    color: #fff !important;
+  }
+  .linkat::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .linkat:hover::before,
+  .linkat.active::before {
+    visibility: visible;
+    width: 80%;
+  }
+  .navbar li {
+    position: relative;
+  }
+  .dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0;
+    white-space: nowrap;
+    letter-spacing: 0.4px;
+    position: relative;
+  }
+  .dropdown a i,
+  .dropdown a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+  .dropdown ul li {
+    min-width: 200px;
+  }
+  .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    color: #4e4e4e;
+  }
+  .dropdown .dropdown ul {
+    position: absolute;
+    top: 0;
+    left: -90%;
+  }
+  .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+  .dropdown ul a:hover,
+  .dropdown ul .active:hover,
+  .dropdown ul li:hover > a {
+    color: #0078ff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sliders .carousel-caption p {
+    padding: 0 13rem;
+  }
+}
