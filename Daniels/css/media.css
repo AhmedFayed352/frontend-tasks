@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+  header .container {
+    width: 750px;
+  }
+  .home .home-content h2 {
+    font-size: 40px;
+  }
+  header .nav-edits ul {
+    background: none;
+  }
+  header .nav-edits ul li a {
+    font-size: 14px;
+    color: #fff !important;
+  }
+  header .nav-edits ul li a span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .navbar-nav .nav-link.active ::before {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .container {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .container {
+    width: 1170px;
+  }
+  .testimonial .narrow-content {
+    padding-inline: 4.5rem;
+  }
+  .home .home-content h2 {
+    font-size: 50px;
+  }
+}

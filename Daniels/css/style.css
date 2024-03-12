@@ -1,0 +1,574 @@
+body {
+  font-family: "Poppins", "sans-serif";
+  color: #343434;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: "Montserrat", "sans-serif";
+}
+.section-title {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.section-title h1 {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+.section-title h1::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url("../images/dots.png");
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Loader CSS -------------- */
+/*
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loader 1.5s;
+}
+.loading .load-circle {
+  margin: 50vh auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid #e8e8e8;
+  border-top: 10px solid #000;
+  opacity: 0;
+  animation: rotate 1.5s;
+}
+.loading::before {
+  content: "";
+  background: rgba(0, 0, 0, 0);
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 1s;
+  animation: HideBot 1.2s;
+}
+.loading::after {
+  content: "";
+  background: rgba(0, 0, 0, 0);
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+  animation: HideTop 1.2s;
+}
+*/
+/*------------------------------------------------------------------------*/
+/* ---------------  navbar CSS -------------- */
+header .container {
+  max-width: 100%;
+}
+.nav-edits {
+  padding: 35px 0 30px;
+  transition: all 0.5s;
+}
+header .nav-edits .logo {
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+header .nav-edits button {
+  border: 0;
+  background: none;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+}
+header .nav-edits ul {
+  background: #fff;
+}
+header .nav-edits ul li {
+  text-align: center;
+}
+header .nav-edits ul li a {
+  color: #000 !important;
+}
+header .nav-edits button span {
+  color: white;
+}
+.navbar-scrolled {
+  background-color: #fff;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+  padding: 20px 0 15px;
+}
+
+/*------------------------------------------------------------------------*/
+/* ---------------  Home CSS -------------- */
+.home {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.home .layer {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home .home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .home-content h1 {
+  font-weight: 800;
+  font-size: 50px;
+}
+.home .home-content h2 {
+  font-weight: 200;
+  padding: 0.4em 0;
+  font-size: 25px;
+}
+.home .home-content h2::after {
+  content: "";
+  font-weight: 400;
+  animation: typing 8s infinite;
+}
+div.social-links {
+  margin-top: 20px;
+}
+div.social-links ul li {
+  margin-inline: 2px;
+}
+div.social-links ul li a span {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+}
+div.social-links a i {
+  color: #fff;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  About CSS -------------- */
+.about {
+  padding-block: 100px 70px;
+}
+.about .about-img {
+  padding-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.about .about-img::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background-image: url("../images/dots.png");
+  z-index: -1;
+}
+.about .about-content {
+  margin-bottom: 30px;
+}
+.about .about-content h3 {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.about .about-content span {
+  color: #999;
+  letter-spacing: 2px;
+}
+.about .about-content p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+  margin-top: 20px;
+}
+.about .about-content .about-progress {
+  margin-top: 30px;
+}
+.about .about-content .about-progress > div {
+  margin-bottom: 30px;
+  height: 1.4rem;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  --bs-progress-bar-bg: #1c1c1c;
+}
+.about .about-content .about-progress span {
+  color: #fff;
+  margin-inline: 5px;
+}
+.about .about-content .about-progress .progress1 {
+  animation: progress1 2s;
+}
+.about .about-content .about-progress .progress2 {
+  animation: progress2 2s;
+}
+.about .about-content .about-progress .progress3 {
+  animation: progress3 2s;
+}
+.about .about-content .btns {
+  margin-top: 60px;
+}
+.about .about-content .btns a {
+  background-color: #1c1c1c;
+  color: #eee;
+  padding: 10px 30px;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.5s;
+}
+.about .about-content .btns .to-light:hover {
+  background-color: #fff;
+  color: black;
+}
+.about .about-content .btns .to-dark:hover {
+  background-color: #1c1c1c !important;
+  color: white !important;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Services CSS -------------- */
+.services {
+  background-color: #f7f7f7;
+  padding-block: 100px 70px;
+}
+.services .item {
+  padding: 50px 30px;
+  background: #fff;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.services .item:hover span {
+  background: #1c1c1c;
+  color: #fff;
+}
+.services .item span {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.services .item h6 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.services .item p {
+  word-spacing: 2px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #748182;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Portfolio CSS -------------- */
+.portfolio {
+  padding-block: 100px 70px;
+}
+.my-taps ul li button {
+  color: #222 !important;
+  font-weight: 700;
+  font-size: 16px;
+}
+.my-taps ul li button span {
+  position: relative;
+}
+.my-taps ul li button span::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  visibility: hidden;
+  transition: width 0.5s;
+}
+.my-taps ul li button.active span::after {
+  width: 95%;
+  visibility: visible;
+}
+.my-taps .item {
+  position: relative;
+}
+.my-taps .item img {
+  display: block;
+}
+.my-taps .item .layer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.my-taps .item:hover .layer {
+  opacity: 1;
+}
+.my-taps .item .layer h6 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.my-taps .item .layer i {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+  text-align: center;
+  transition: all 0.5s;
+}
+.my-taps .item .layer i:hover {
+  background: #fff;
+  color: #111;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Testimonial CSS -------------- */
+.testimonial {
+  padding-block: 100px 70px;
+  background-color: #f7f7f7;
+}
+.testimonial .narrow-content {
+  padding-inline: 0px;
+}
+.testimonial .inner-img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  margin-inline: auto;
+}
+.testimonial .inner-content {
+  padding: 0;
+}
+.testimonial .inner-content p {
+  word-spacing: 2px;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+.testimonial .inner-content h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-block: 30px 5px;
+  color: #343434;
+}
+.testimonial .inner-content span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 30px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #869791;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-inline: 8px;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Area CSS -------------- */
+.area {
+  padding-block: 100px 70px;
+  text-align: center;
+}
+.area .item .icons {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.area .item h3 {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.area .item p {
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #748182;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Team CSS -------------- */
+.team {
+  padding-block: 100px 70px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.team-profiles .inner-team {
+  background-color: rgba(52, 52, 52, 0.8);
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+.team-profiles .inner-team .layer {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+}
+.team-profiles .inner-team:hover .layer {
+  opacity: 1;
+  transform: rotateY(360deg) scale(1, 1);
+}
+.inner-team .layer ul li a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-inline: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-team .layer ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+div.team-imgs {
+  overflow: hidden;
+}
+div.team-imgs img {
+  transition: all 0.5s;
+}
+div.team-imgs:hover img {
+  transform: scale(1.2);
+}
+.team-profiles .inner-team .team-content {
+  padding: 25px;
+  color: #fff;
+}
+.team-profiles .inner-team .team-content h4 {
+  margin: 0 0 5px;
+  font-size: 25px;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Contact CSS -------------- */
+.contact {
+  padding-block: 100px 70px;
+}
+.contact .item {
+  margin-bottom: 30px;
+}
+.contact .item:hover span {
+  background-color: #000;
+  color: #fff;
+}
+.contact .item span {
+  display: inline-block;
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.contact .item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contact .item p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+.contact .controls input[type="text"],
+.contact .controls input[type="email"],
+.contact .controls textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f4f4f4;
+}
+.contact .controls textarea {
+  height: 160px;
+  max-height: 160px;
+  max-width: 100%;
+}
+.contact .controls a {
+  background-color: #1c1c1c;
+  color: #eee;
+  padding: 10px 30px;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.5s;
+}
+.contact .controls a:hover {
+  background-color: #fff;
+  color: black;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Footer CSS -------------- */
+footer {
+  background: #1c1c1c;
+  padding: 30px;
+}
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+  line-height: 1.6;
+  margin: 0;
+  color: #748182;
+}
