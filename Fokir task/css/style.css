@@ -1,0 +1,820 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700");
+
+/* Static for all WebSites */
+:root {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.clr {
+  clear: left;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  navbar CSS -------------- */
+.nav-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+div.navbar {
+  width: 85%;
+  padding: 20px 0;
+  margin-inline: auto;
+}
+.navbar div.logo a {
+  float: left;
+  font-size: 24px;
+  color: #ff305b;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar div.nav-right {
+  float: right;
+}
+.navbar div.nav-right ul {
+  list-style: none;
+}
+.navbar div.nav-right ul li {
+  float: left;
+  padding-inline: 10px;
+}
+.navbar div.nav-right ul li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.navbar div.nav-right ul li a:hover {
+  color: #ff305b;
+}
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  HomePage CSS -------------- */
+div.home {
+  height: 100vh;
+  background-image: url("../images/hero\ img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.home div.home-layer {
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  height: 100%;
+}
+
+div.home div.home-content {
+  text-align: center;
+  margin-top: 180px;
+  color: white;
+  width: 85%;
+  margin-inline: auto;
+}
+div.home div.home-content h3 {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: "Source Sans Pro", sans-serif;
+}
+div.home div.home-content h1 {
+  color: #ff305b;
+  margin-block: 15px;
+  font-size: 65px;
+  font-weight: bold;
+}
+div.home div.home-content h4 {
+  font-size: 24px;
+  font-weight: 100;
+}
+div.home div.home-content h4::after {
+  content: "";
+  animation: typing 12s infinite;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  PersonInfo CSS -------------- */
+div.person-info {
+  width: 100%;
+}
+div.container {
+  width: 85%;
+  margin-inline: auto;
+  padding: 100px 0 100px;
+  line-height: 25px;
+  height: 100%;
+}
+div.container div.photo {
+  float: left;
+  width: 50%;
+  padding-left: 7.5%;
+}
+div.container div.photo div.img-border {
+  width: 75%;
+  height: 100%;
+  box-shadow: 0 0 0 8px #555555 inset;
+  border-radius: 5px;
+}
+div.container div.photo div.img-border div.profile-photo {
+  position: relative;
+  top: 24px;
+  left: 24px;
+  height: 100%;
+}
+div.container div.photo div.img-border div.profile-photo img {
+  border-radius: 5px;
+  display: block;
+}
+div.img-border div.profile-photo div.profile-overlay {
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+div.container
+  div.photo
+  div.img-border
+  div.profile-photo:hover
+  div.profile-overlay {
+  top: 0;
+  visibility: visible;
+}
+div.img-border div.profile-photo div.profile-overlay div.social-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.social-icon li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-icon li a {
+  display: block;
+  font-size: 20px;
+  height: 20px;
+  width: 32px;
+  color: #fff;
+}
+.social-icon li a:hover {
+  color: #ff305b;
+}
+div.container div.information {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+div.information h2 {
+  position: relative;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
+}
+div.information h2::after {
+  background: #ff305b;
+  content: "";
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+div.information p {
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #999;
+  padding-bottom: 25px;
+  color: #555555;
+}
+div.information ul li {
+  float: left;
+  width: 40%;
+  color: #555555;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+div.information ul li span {
+  color: #333;
+  font-weight: 500;
+}
+div.information ul li a {
+  color: #555555;
+}
+.clr a {
+  background: #ff305b;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 24px;
+  transition: all 0.3s ease-in-out;
+}
+.clr a:hover {
+  background: #ec2403;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Services CSS -------------- */
+div.our-services {
+  background-color: #f1f1f1;
+  padding: 100px 0 55px;
+  width: 100%;
+}
+div.our-services div.container-2 {
+  width: 85%;
+  margin-inline: auto;
+  text-align: center;
+}
+div.our-services div.container-2 div.header h2 {
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+}
+div.our-services div.container-2 div.header h2::before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  border: solid #ff305b;
+  border-width: 1px 0;
+  bottom: 0;
+  padding: 4px 0 5px;
+  width: 70px;
+}
+div.our-services div.container-2 div.header h2::after {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+}
+div.our-services div.container-2 div.our-services-content {
+  width: 100%;
+}
+div.our-services div.container-2 div.our-services-content div.services {
+  width: 100%;
+}
+div.single-service {
+  float: left;
+  width: 25%;
+}
+div.single-service div.single-service-inner {
+  padding: 40px 15px;
+  transition: all 0.3s ease-in-out;
+}
+.single-service:hover .single-service-inner {
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+div.single-service i {
+  display: block;
+  color: #ff305b;
+  font-size: 36px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.single-service:hover .single-service-inner i {
+  transform: scale(1.2);
+}
+div.single-service h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  line-height: 1.1;
+}
+div.single-service p {
+  color: #555555;
+  line-height: 1.5;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Portofolio CSS -------------- */
+div.portofolio {
+  padding: 100px 0 70px;
+}
+div.portofolio div.container-3 {
+  width: 85%;
+  margin-inline: auto;
+  text-align: center;
+}
+div.portofolio div.container-3 div.our-portofolio h2 {
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+}
+div.portofolio div.container-3 div.our-portofolio h2::before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  border: solid #ff305b;
+  border-width: 1px 0;
+  bottom: 0;
+  padding: 4px 0 5px;
+  width: 70px;
+}
+div.portofolio div.container-3 div.our-portofolio h2::after {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+}
+div.portofolio div.container-3 div.btns {
+  margin-bottom: 50px;
+}
+div.portofolio div.container-3 div.btns button {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 3px 12px;
+  cursor: pointer;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0);
+  border: medium none;
+}
+div.portofolio-elements {
+  position: relative;
+  height: 600px;
+}
+div.portofolio-elements div.element1 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 0%;
+  top: 0px;
+}
+div.portofolio-elements div.element2 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 33.3333%;
+  top: 0px;
+}
+div.portofolio-elements div.element3 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 66.6667%;
+  top: 0px;
+}
+div.portofolio-elements div.element4 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 0%;
+  top: 299px;
+}
+div.portofolio-elements div.element5 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 33.3333%;
+  top: 299px;
+}
+div.portofolio-elements div.element6 {
+  position: absolute;
+  width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 66.6667%;
+  top: 299px;
+}
+div.inner {
+  position: relative;
+  margin-bottom: 30px;
+}
+div.innner a {
+  display: block;
+  position: relative;
+}
+div.portofolio-elements img {
+  width: 100%;
+  display: block;
+}
+div.layer {
+  position: absolute;
+  visibility: hidden;
+  transition: background-color 0.4s;
+}
+div.layer div.icon-down {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  color: #ff305b;
+  font-size: 20px;
+}
+div.inner:hover div.layer {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Area CSS -------------- */
+div.area {
+  padding: 100px 0;
+  background-color: #f1f1f1;
+}
+div.area div.container-4 {
+  width: 85%;
+  margin-inline: auto;
+  text-align: center;
+}
+div.area div.container-4 div.content-2 {
+  width: 25%;
+  float: left;
+}
+div.area div.container-4 div.content-2 i {
+  color: #ff305b;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+div.area div.container-4 div.content-2 h3 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+}
+div.area div.container-4 div.content-2 h5 {
+  color: #555555;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-FeedBack CSS -------------- */
+div.client-feedback {
+  padding: 100px 0;
+}
+div.client-feedback div.container-5 {
+  width: 85%;
+  margin-inline: auto;
+}
+div.client-feedback div.container-5 div.our-feedback h2 {
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+div.client-feedback div.container-5 div.our-feedback h2::before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  border: solid #ff305b;
+  border-width: 1px 0;
+  bottom: 0;
+  padding: 4px 0 5px;
+  width: 70px;
+}
+div.client-feedback div.container-5 div.our-feedback h2::after {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+}
+div.feedback-item {
+  background: #f1f1f1;
+  border-radius: 5px;
+  width: 750px;
+  margin-left: 16%;
+  overflow: hidden;
+  padding: 40px;
+  position: relative;
+}
+div.feedback-item::after {
+  content: "";
+  border-color: #ff305b rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 191px;
+  left: -199px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+div.feedback-item div.feedback-img {
+  float: left;
+  margin: 12px auto;
+  position: relative;
+  width: 110px;
+  z-index: 2;
+}
+div.feedback-item div.feedback-img img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+div.feedback-item div.feedback-content {
+  padding-left: 130px;
+}
+div.feedback-item div.feedback-content h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 10px;
+}
+div.feedback-item div.feedback-content h4 {
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+div.feedback-item div.feedback-content h4 a {
+  color: #777;
+}
+div.feedback-item div.feedback-content p {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #555555;
+}
+div.feedback-item div.feedback-content div.review {
+  color: #f1c30d;
+  margin-bottom: 15px;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Blog CSS -------------- */
+div.blog {
+  padding: 100px 0;
+  background: #f1f1f1;
+}
+div.blog div.container-6 {
+  width: 85%;
+  margin-inline: auto;
+}
+div.blog div.container-6 div.our-blog h2 {
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+div.blog div.container-6 div.our-blog h2::before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  border: solid #ff305b;
+  border-width: 1px 0;
+  bottom: 0;
+  padding: 4px 0 5px;
+  width: 70px;
+}
+div.blog div.container-6 div.our-blog h2::after {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+}
+div.blogs div.single-blog {
+  float: left;
+  width: 33.3333%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+div.blogs div.single-blog div.post-thumbnail a img {
+  display: block;
+  width: 100%;
+}
+div.blogs div.single-blog div.post-thumbnail iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+div.blogs div.single-blog div.post-content {
+  padding: 20px;
+  background-color: #fff;
+}
+div.blogs div.single-blog div.post-content h4 {
+  color: #555555;
+  margin-bottom: 10px;
+}
+div.blogs div.single-blog div.post-content h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+}
+div.blogs div.single-blog div.post-content h3 a {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+div.blogs div.single-blog div.post-content h3 a:hover {
+  color: #ff305b;
+}
+div.blogs div.single-blog div.post-content p {
+  margin-bottom: 15px;
+  color: #555555;
+}
+div.read-more a {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+div.read-more a:hover {
+  color: #ff305b;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Contact CSS -------------- */
+div.contact {
+  padding: 100px 0;
+}
+div.contact div.container-7 {
+  width: 85%;
+  margin-inline: auto;
+}
+div.contact div.container-7 div.contact-us h2 {
+  font-size: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+div.contact div.container-7 div.contact-us h2::before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  border: solid #ff305b;
+  border-width: 1px 0;
+  bottom: 0;
+  padding: 4px 0 5px;
+  width: 70px;
+}
+div.contact div.container-7 div.contact-us h2::after {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+}
+div.contact div.container-7 div.form-info {
+  width: 66.6667%;
+  margin-left: 16%;
+}
+div.for-padd {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.for-inputs {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #555555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+div.form-info div.row input {
+  height: 40px;
+}
+div.for-padding {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+div.form-info div.row textarea {
+  height: 100px;
+}
+.btn-submit {
+  background-color: #ff305b;
+  border: 1px solid #ff305b;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 38px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn-submit:hover {
+  background-color: #ec2403;
+}
+/*------------------------------------------------------------------------*/
+/* ---------------  Our-Footer CSS -------------- */
+div.footer {
+  padding: 50px 0;
+  background-color: #333;
+  text-align: center;
+}
+div.footer div.container-8 {
+  width: 85%;
+  margin-inline: auto;
+}
+div.footer-social-icon li {
+  display: inline-block;
+}
+div.footer-social-icon li a {
+  color: #fff;
+  display: block;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+div.footer-social-icon li a:hover {
+  color: #ff305b;
+}
+p.copy-right {
+  color: #fff;
+  margin-top: 5px;
+}
+p.copy-right a {
+  color: #ff305b;
+  transition: all 0.3s ease-in-out;
+}
+p.copy-right a:hover {
+  text-decoration: underline;
+}
