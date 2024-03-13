@@ -27,11 +27,6 @@
     <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body data-bs-spy="scroll" data-bs-target="header">
-    <!-- --------- Loader Section ------------- 
-    <div class="loading loading-end">
-      <div class="load-circle"></div>
-    </div>
-    -->
     <!-- --------- Navbar Section ------------- -->
     <header class="fixed-top" id="header">
       <nav class="navbar navbar-expand-md nav-edits">
@@ -1125,6 +1120,17 @@
         </div>
       </div>
     </footer>
+
     <script src="./bootstrap/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const navEl = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= 550) {
+          navEl.classList.add("navbar-scrolled");
+        } else if (window.scrollY < 550) {
+          navEl.classList.remove("navbar-scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
