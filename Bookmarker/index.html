@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-between align-items-center">
+            <h1 class="py-2 position-relative">Bookmarker</h1>
+            <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites 
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" oninput="validation(this,nameRegex)" id="bookmarkName" class="form-control" placeholder="Bookmark Name">
+                </div>
+                <div class="w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkURL" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="url" oninput="validation(this,urlRegex)" id="bookmarkURL" class="form-control" placeholder="Website URL">
+                </div>
+                <button type="button" onclick="addSite()" class="btn btn-danger px-5" id="submitBtn">Submit</button>
+            </div>
+            <table class="table mt-4 text-center">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">website name</th>
+                        <th class="text-capitalize">visit</th>
+                        <th class="text-capitalize">delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+        </div>
+        <div id="showNoInputs" class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+                <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                    <div class="circles d-flex">
+                        <span class="rounded-circle me-2 c1"></span>
+                        <span class="rounded-circle me-2 c2"></span>
+                        <span class="rounded-circle me-2 c3"></span>
+                    </div>
+                    <button type="button" onclick="closeRulesWindow()" title="close" class="btn border-0" id="closeBtn">
+                        <i class="fa-solid fa-xmark fs-3"></i>
+                    </button>
+                </header>
+                <p class="m-0 pb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+                <ol class="list-unstyled m-0">
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>Site URL must be like www.Sitename.com
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

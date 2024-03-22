@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+}
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+main {
+  background-color: #f7ecde;
+  min-height: 100vh;
+}
+main h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  z-index: 1;
+}
+main h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 350ms;
+  z-index: -1;
+}
+main h1:hover::before {
+  height: 50%;
+}
+.bookmark-body {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.bookmark-body h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-danger {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+table {
+  vertical-align: middle !important;
+}
+.table {
+  --bs-table-bg: #f8f9fa;
+}
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+.btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+.box-info {
+  background-color: #0007;
+}
+.box-content {
+  width: 500px;
+  z-index: 10;
+}
+.box-content p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #352e28;
+}
+.c1 {
+  background-color: #f15f5d;
+}
+.c2 {
+  background-color: #febe2e;
+}
+.c3 {
+  background-color: #4db748;
+}
+.circles span {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.box-content ol li {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.box-content ol li i {
+  color: #bb4120;
+}
